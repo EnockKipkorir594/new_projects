@@ -4,7 +4,7 @@ from decimal import Decimal, getcontext
 import math 
 
 def calc_pi(n):
-    getcontext().prec = n + 5
+    getcontext().prec = n + 5# n+5 increases the accuracy of pi 
 
     C = 426880 * Decimal(math.sqrt(10005))
     M =1
@@ -30,7 +30,7 @@ pi_val = calc_pi(p)
 print(f"Pi to {p} decimal places: \n {pi_val}")
 
 
-     
+
 
 
 
