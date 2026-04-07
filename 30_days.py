@@ -8,8 +8,7 @@ MongoDB
 Postman 
 
 '''
-from flask  import Flask, Response
-import json
+from flask  import Flask, jsonify
 import os
 
 app = Flask(__name__)
@@ -49,7 +48,7 @@ def students():
         'skills':['Lovable', 'ML', 'Devops', 'Cybersecurity']
     }
     ]
-    return Response(json.dumps(student_list), mimetype='application/json')
+    return jsonify(student_list)
 
 
 if __name__ == '__main__':
