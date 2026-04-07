@@ -15,13 +15,13 @@ def get_students():
     return jsonify(students)
 
 def add_students():
-    data = request.json 
+    data = request.json
     if not data or 'name' not in data:
         return jsonify({'error':'Student must have name'}), 400
     students_collections.insert_one(data)
     return jsonify({'student':'student added successfully'}), 201
 
-if __name__ == '__main__':
+if __name__ == '__main__':    
 
 
     port = int(os.environ.get('PORT', 5000))
