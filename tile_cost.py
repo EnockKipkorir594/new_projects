@@ -27,7 +27,7 @@ def tile_cost():
 
 
 total_tile_cost = tile_cost()
-print(tile_cost)
+print(total_tile_cost)
 
 
 
