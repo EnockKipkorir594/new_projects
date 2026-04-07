@@ -1,10 +1,12 @@
-def binary_to_decimal(binary_str):
-    #how can I convert a number from binary to decimaal
-    #binary are 1s and 0s 
-    #example 1111
-    #from the right 2 ** 0 + 2 ** 1 + 2** 2 + 2 ** 3 = 15
-    #from decimal to binary no % 2 == taking account of the remainder 
-    #return the remainder 
+'''
+    how can I convert a number from binary to decimaal
+    binary are 1s and 0s 
+    example 1111
+    from the right 2 ** 0 + 2 ** 1 + 2** 2 + 2 ** 3 = 15
+    from decimal to binary no % 2 == taking account of the remainder 
+    return the remainder
+'''
+def binary_to_decimal(binary_str): 
     decimal_num = 0
     power = 0 
     for num in reversed(binary_str):
