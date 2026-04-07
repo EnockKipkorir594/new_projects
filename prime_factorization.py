@@ -4,14 +4,14 @@ def prime_factors(num):
     
     #two numbers that multiply to get the user entered number 
     factors = []
-    divisor = 2 
-    while divisor * divisor <= num:
-        if num % divisor == 0:
-            factors.append(divisor)
-            num //= divisor 
+    i = 2 
+    while i * i <= num:
+        if num % i == 0:
+            factors.append(i)
+            num //= i 
 
         else:
-            divisor += 1
+            i += 1
 
     if num > 1:
         factors.append(num)
