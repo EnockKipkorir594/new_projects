@@ -1,10 +1,13 @@
 from flask import Flask, jsonify, request
 from pymongo import MongoClient
 import os
+from dotenv import load_env
+
+load_env()
 
 app = Flask(__name__)
 
-client = MongoClient('mongodb+srv://Tucker_kipkorir:<db_password>@cluster0.phctrpv.mongodb.net/')
+client = MongoClient(os.getenv("DATABASE_URL"))
 
 db = client.myDatabase
 students_collections = db.students
